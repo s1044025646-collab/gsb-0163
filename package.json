@@ -1,0 +1,23 @@
+{
+  "name": "double-sampling-acceptance",
+  "version": "1.0.0",
+  "description": "Finite-lot double-sampling acceptance backend: hypergeometric OC/ASN/risk engine, API, CLI, fixtures and tests (Windows, localhost only).",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "tsx src/cli/index.ts serve",
+    "migrate": "tsx src/cli/index.ts migrate",
+    "demo": "tsx src/cli/index.ts demo",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.0"
+  }
+}
