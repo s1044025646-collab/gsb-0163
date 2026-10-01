@@ -1,0 +1,27 @@
+{
+  "plans": [
+    { "key": "standard", "name": "standard-double", "lotSize": 200, "n1": 20, "n2": 40, "ac1": 1, "re1": 4, "ac2": 4, "re2": 5 },
+    { "key": "allGood", "name": "fixture-all-good", "lotSize": 50, "n1": 10, "n2": 10, "ac1": 0, "re1": 2, "ac2": 1, "re2": 2 },
+    { "key": "allBad", "name": "fixture-all-bad", "lotSize": 50, "n1": 10, "n2": 10, "ac1": 0, "re1": 2, "ac2": 1, "re2": 2 },
+    { "key": "degenerate", "name": "fixture-zero-continue", "lotSize": 100, "n1": 15, "n2": 0, "ac1": 2, "re1": 3, "ac2": 2, "re2": 3 },
+    { "key": "fullLot", "name": "fixture-full-lot", "lotSize": 30, "n1": 10, "n2": 20, "ac1": 1, "re1": 3, "ac2": 2, "re2": 3 },
+    { "key": "edge", "name": "fixture-edge-thresholds", "lotSize": 80, "n1": 10, "n2": 20, "ac1": 0, "re1": 2, "ac2": 1, "re2": 2 },
+    { "key": "rare", "name": "fixture-tiny-probability", "lotSize": 1000, "n1": 5, "n2": 5, "ac1": 0, "re1": 2, "ac2": 1, "re2": 2 }
+  ],
+  "batches": [
+    { "key": "allGood", "plan": "allGood", "label": "FXT-ALL-GOOD", "trueDefectives": 0,
+      "rounds": [ { "round": 1, "defectives": 0, "good": 10 } ] },
+    { "key": "allBad", "plan": "allBad", "label": "FXT-ALL-BAD", "trueDefectives": 50,
+      "rounds": [ { "round": 1, "defectives": 10, "good": 0 } ] },
+    { "key": "degenerate", "plan": "degenerate", "label": "FXT-SINGLE-STAGE", "trueDefectives": 10,
+      "rounds": [ { "round": 1, "defectives": 2, "good": 13 } ] },
+    { "key": "fullLot", "plan": "fullLot", "label": "FXT-FULL-LOT", "trueDefectives": 3,
+      "rounds": [ { "round": 1, "defectives": 2, "good": 8 }, { "round": 2, "defectives": 1, "good": 19 } ] },
+    { "key": "edge", "plan": "edge", "label": "FXT-EDGE", "trueDefectives": 1,
+      "rounds": [ { "round": 1, "defectives": 1, "good": 9 }, { "round": 2, "defectives": 0, "good": 20 } ] },
+    { "key": "rare", "plan": "rare", "label": "FXT-RARE", "trueDefectives": 1,
+      "rounds": [ { "round": 1, "defectives": 0, "good": 5 } ] },
+    { "key": "twoStage", "plan": "standard", "label": "FXT-TWO-STAGE", "trueDefectives": 20,
+      "rounds": [ { "round": 1, "defectives": 2, "good": 18 }, { "round": 2, "defectives": 2, "good": 38 } ] }
+  ]
+}
